@@ -1,5 +1,7 @@
 package br.com.zup.edu.nossosistemadebares.bar;
 
+import br.com.zup.edu.nossosistemadebares.bar.request.ReservaRequest;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -41,5 +43,15 @@ public class Mesa {
 
     public Long getId() {
         return id;
+    }
+
+    public boolean estaLivre() {
+        return status.equals(LIVRE);
+    }
+
+    public void reservar(ReservaRequest request) {
+        this.status = OCUPADO;
+        this.reservadoPara = request.getReservadoPara();
+        this.atualizadoEm = now();
     }
 }

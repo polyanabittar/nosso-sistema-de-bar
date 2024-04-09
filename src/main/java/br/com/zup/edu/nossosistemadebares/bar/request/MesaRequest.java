@@ -1,4 +1,6 @@
-package br.com.zup.edu.nossosistemadebares.bar;
+package br.com.zup.edu.nossosistemadebares.bar.request;
+
+import br.com.zup.edu.nossosistemadebares.bar.Mesa;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
